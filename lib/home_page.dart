@@ -103,16 +103,33 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Center(
-            child: MaterialButton(
-              onPressed: () {
-                createBikeNotification();
-              },
-              child: const Text('Send Immediate Notification'),
-              color: Colors.blue,
-              textColor: Colors.white,
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Center(
+              child: MaterialButton(
+                onPressed: () {
+                  createBikeNotification();
+                },
+                child: const Text('Send Immediate Notification'),
+                color: Colors.blue,
+                textColor: Colors.white,
+              ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Center(
+              child: MaterialButton(
+                onPressed: () {
+                  createDelayedBikeNotification();
+                },
+                child: const Text('Send Notification in 10 Seconds'),
+                color: Colors.blue,
+                textColor: Colors.white,
+              ),
+            ),
+          ),
+
         ],
       ),
     );

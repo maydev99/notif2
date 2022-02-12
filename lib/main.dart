@@ -12,6 +12,13 @@ void main() {
           defaultColor: Colors.teal,
           importance: NotificationImportance.High,
           channelShowBadge: true,
+        ),
+        NotificationChannel(
+          channelKey: 'delayed_channel',
+          channelName: 'delayed_notification',
+          defaultColor: Colors.red,
+          importance: NotificationImportance.High,
+          channelShowBadge: true
         )
       ]);
   runApp(const MyApp());
