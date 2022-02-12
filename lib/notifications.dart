@@ -45,4 +45,10 @@ Future<void> createDelayedBikeNotification() async {
     ),
 
   );
+
+
+}
+
+Future<void> cancelScheduledNotifications() async {
+  await AwesomeNotifications().cancelAllSchedules();
 }

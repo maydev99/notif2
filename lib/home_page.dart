@@ -129,6 +129,19 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Center(
+              child: MaterialButton(
+                onPressed: () {
+                  cancelScheduledNotifications();
+                },
+                child: const Text('Cancel Notifications'),
+                color: Colors.blue,
+                textColor: Colors.white,
+              ),
+            ),
+          ),
 
         ],
       ),
