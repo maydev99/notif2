@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
     });
 
     AwesomeNotifications().actionStream.listen((notification) {
-      if (notification.channelKey == 'bike_channel' && Platform.isIOS) {
+      if (notification.channelKey == 'bike_channel' || notification.channelKey == 'delayed_channel' && Platform.isIOS) {
         AwesomeNotifications().getGlobalBadgeCounter().then(
               (value) =>
                   AwesomeNotifications().setGlobalBadgeCounter(value - 1),
